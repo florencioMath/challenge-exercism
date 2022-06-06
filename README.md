@@ -1,2 +1,2 @@
 # Exercism
- Challenges ffrom Exercism
+ Challenges from Exercism
