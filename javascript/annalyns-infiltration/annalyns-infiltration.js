@@ -27,32 +27,20 @@
  * @return {boolean} Whether or not you can execute a fast attack.
  */
 export function canExecuteFastAttack(knightIsAwake) {
-  if (knightIsAwake) {
-    return false;
-  } else {
-    return true;
-  }
+  return !knightIsAwake;
 }
 
 /**
  * A useful spy captures information, which they can't do if everyone's asleep.
  *
- * @param {boolean} knightIsAwake //false
- * @param {boolean} archerIsAwake //true
- * @param {boolean} prisonerIsAwake //false
+ * @param {boolean} knightIsAwake
+ * @param {boolean} archerIsAwake
+ * @param {boolean} prisonerIsAwake
  *
  * @returns {boolean} Whether or not you can spy on someone.
  */
 export function canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake) {
-  if (knightIsAwake && archerIsAwake && prisonerIsAwake) {
-    return false;
-  }
-  if (!archerIsAwake) {
-    return true;
-  }
-  if (!knightIsAwake && archerIsAwake && !prisonerIsAwake) {
-    return true;
-  }
+  return knightIsAwake || archerIsAwake || prisonerIsAwake;
 }
 
 /**
@@ -64,7 +52,7 @@ export function canSpy(knightIsAwake, archerIsAwake, prisonerIsAwake) {
  * @returns {boolean} Whether or not you can send a signal to the prisoner.
  */
 export function canSignalPrisoner(archerIsAwake, prisonerIsAwake) {
-  return true;
+  return prisonerIsAwake && !archerIsAwake;
 }
 
 /**
@@ -83,5 +71,8 @@ export function canFreePrisoner(
   prisonerIsAwake,
   petDogIsPresent,
 ) {
-  return false;
+  return (
+    (prisonerIsAwake && !knightIsAwake && !archerIsAwake) ||
+    (petDogIsPresent && !archerIsAwake)
+  );
 }
