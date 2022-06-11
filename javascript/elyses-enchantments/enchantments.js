@@ -35,7 +35,7 @@ export function setItem(cards, position, replacementCard) {
  * @returns {number[]} the cards with the newCard applied
  */
 export function insertItemAtTop(cards, newCard) {
-  cards.unshift(newCard);
+  cards.push(newCard);
   return cards;
 }
 
@@ -48,7 +48,8 @@ export function insertItemAtTop(cards, newCard) {
  * @returns {number[]} the cards without the removed card
  */
 export function removeItem(cards, position) {
-  return cards.splice(position);
+  cards.splice(position);
+  return cards;
 }
 
 /**
