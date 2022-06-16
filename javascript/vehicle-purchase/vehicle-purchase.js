@@ -23,9 +23,11 @@ export function needsLicense(kind) {
  * @returns {string} a sentence of advice which option to choose
  */
 export function chooseVehicle(option1, option2) {
-  return option2 > option1
-    ? `${option1} is clearly the better choice.`
-    : `${option2} is clearly the better choice.`;
+  if (option1 > option2) {
+    return `${option2} is clearly the better choice.`;
+  } else {
+    return `${option1} is clearly the better choice.`;
+  }
 }
 
 /**
@@ -37,11 +39,10 @@ export function chooseVehicle(option1, option2) {
  * @returns expected resell price in the dealership
  */
 export function calculateResellPrice(originalPrice, age) {
-  if(age < 3) {
-    return originalPrice - 80%
+  if (age < 3) {
+    return originalPrice * 0.8; // "originalPrice - 80%"
   } else if (age > 10) {
-    return originalPrice - 50%
-  } else {
-    return originalPrice -70%
+    return originalPrice * 0.5; // "originalPrice - 50%"
   }
+  return originalPrice * 0.7; // "originalPrice -70%"
 }
