@@ -10,12 +10,13 @@
  * @param {number[]} birdsPerDay
  * @returns {number} total bird count
  */
-let totalBirds = 0;
 export function totalBirdCount(birdsPerDay) {
-  for (let i = 0; i < birdsPerDay.length; i++) {
-    totalBirds += birdsPerDay[i];
+  const days = birdsPerDay.length;
+  let count = 0;
+  for (let i = 0; i < days; i++) {
+    count += birdsPerDay[i];
   }
-  return totalBirds;
+  return count;
 }
 
 /**
