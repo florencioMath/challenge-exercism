@@ -26,12 +26,16 @@ export function totalBirdCount(birdsPerDay) {
  * @param {number} week
  * @returns {number} birds counted in the given week
  */
-let totalBirdsWeek = 0;
 export function birdsInWeek(birdsPerDay, week) {
-  for (let i = 0; i < birdsPerDay.length; i++) {
-    totalBirdsWeek += birdsPerDay[i];
+  const startDay = (week - 1) * 7;
+  const endDay = startDay + 7;
+
+  let count = 0;
+
+  for (let i = startDay; i < endDay; i++) {
+    count += birdsPerDay[i];
   }
-  return totalBirdsWeek / week;
+  return count;
 }
 
 /**
