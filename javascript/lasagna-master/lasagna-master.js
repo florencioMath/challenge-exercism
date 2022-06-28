@@ -40,3 +40,8 @@ export function quantities(layers) {
   });
   return { noodles, sauce };
 }
+
+// 4. Add the secret ingredient
+export function addSecretIngredient(friendsList, myList) {
+  myList.push(friendsList[friendsList.length - 1]);
+}
