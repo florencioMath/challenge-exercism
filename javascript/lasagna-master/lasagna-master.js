@@ -45,3 +45,15 @@ export function quantities(layers) {
 export function addSecretIngredient(friendsList, myList) {
   myList.push(friendsList[friendsList.length - 1]);
 }
+
+// 5. Scale the recipe
+export function scaleRecipe(recipe, portions) {
+  const scaled = { ...recipe };
+  const amount = portions / 2;
+
+  for (let ingredient in scaled) {
+    scaled[ingredient] *= amount;
+  }
+
+  return scaled;
+}
