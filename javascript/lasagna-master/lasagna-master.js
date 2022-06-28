@@ -11,6 +11,7 @@
  * }
  */
 
+//  1. Determine whether the lasagna is done
 export function cookingStatus(remainingTime) {
   if (remainingTime === 0) {
     return "Lasagna is done.";
@@ -19,4 +20,9 @@ export function cookingStatus(remainingTime) {
   } else {
     return "You forgot to set the timer.";
   }
+}
+
+// 2. Estimate the preparation time
+export function preparationTime(layers, timePerLayer = 2) {
+  return layers.length * timePerLayer;
 }
