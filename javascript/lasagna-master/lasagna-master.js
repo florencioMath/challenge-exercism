@@ -26,3 +26,17 @@ export function cookingStatus(remainingTime) {
 export function preparationTime(layers, timePerLayer = 2) {
   return layers.length * timePerLayer;
 }
+
+// 3. Compute the amounts of noodles and sauce needed
+export function quantities(layers) {
+  let noodles = 0;
+  let sauce = 0;
+  layers.forEach((layer) => {
+    if (layer === "noodles") {
+      noodles += 50;
+    } else if (layer === "sauce") {
+      sauce += 0.2;
+    }
+  });
+  return { noodles, sauce };
+}
