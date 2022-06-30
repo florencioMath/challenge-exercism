@@ -8,8 +8,7 @@
  *
  * @returns {Card} the first card in the deck
  */
-export function getFirstCard(deck) {
-  const [firstCard] = deck;
+export function getFirstCard([firstCard]) {
   return firstCard;
 }
 
@@ -20,8 +19,7 @@ export function getFirstCard(deck) {
  *
  * @returns {Card} the second card in the deck
  */
-export function getSecondCard(deck) {
-  const [firstCard, secondCard] = deck;
+export function getSecondCard([, secondCard]) {
   return secondCard;
 }
 
