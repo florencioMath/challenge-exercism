@@ -20,11 +20,13 @@ export function seeingDouble(deck) {
  * @returns {number[]} deck with triplicate 3s
  */
 export function threeOfEachThree(deck) {
-  return deck.reduce((acumulator, currentValue) => {
-    if (currentValue == +"3") {
-      acumulator.splice(acumulator, 0, "3", "3");
+  return deck.reduce((result, card) => {
+    if (card === 3) {
+      result.push(card, card, card);
+    } else {
+      result.push(card);
     }
-    return acumulator;
+    return result;
   }, []);
 }
 
