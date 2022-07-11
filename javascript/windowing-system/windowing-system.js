@@ -27,3 +27,12 @@ Position.prototype.move = function (newX, newY) {
   this.x = newX;
   this.y = newY;
 };
+
+// 3. Define a ProgramWindow class
+export class ProgramWindow {
+  constructor(screenSize, size, position) {
+    this.screenSize = new Size(800, 600);
+    this.size = new Size();
+    this.position = new Position();
+  }
+}
