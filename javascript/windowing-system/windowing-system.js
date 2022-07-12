@@ -30,9 +30,36 @@ Position.prototype.move = function (newX, newY) {
 
 // 3. Define a ProgramWindow class
 export class ProgramWindow {
-  constructor(screenSize, size, position) {
+  constructor() {
     this.screenSize = new Size(800, 600);
     this.size = new Size();
     this.position = new Position();
   }
+  // 4. Add a method to resize the window
+  resize(newSize) {
+    const maxWidth = this.screenSize.width - this.position.x;
+    const maxHeight = this.screenSize.height - this.position.y;
+    const newWidth = Math.max(1, Math.min(newSize.width, maxWidth));
+    const newHeight = Math.max(1, Math.min(newSize.height, maxHeight));
+
+    this.size.resize(newWidth, newHeight);
+  }
+  // 5. Add a method to move the window
+  move(newPosition) {
+    const maxX = this.screenSize.width - this.size.width;
+    const maxY = this.screenSize.height - this.size.height;
+    const newX = Math.max(0, Math.min(newPosition.x, maxX));
+    const newY = Math.max(0, Math.min(newPosition.y, maxY));
+    this.position.move(newX, newY);
+  }
+}
+// 6. Change a program window
+export function changeWindow(programWindow) {
+  programWindow.move(new Position());
+
+  programWindow.resize(new Size(400, 300));
+
+  programWindow.move(new Position(100, 150));
+
+  return programWindow;
 }
