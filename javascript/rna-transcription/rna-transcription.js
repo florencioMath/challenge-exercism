@@ -3,6 +3,12 @@
 // convenience to get you started writing code faster.
 //
 
-export const toRna = () => {
-  throw new Error('Remove this statement and implement this function');
+export const toRna = (dna) => {
+  const map = {
+    C: "G",
+    G: "C",
+    A: "U",
+    T: "A",
+  };
+  return dna.replace(/[CGAT]/g, (nuc) => map[nuc]);
 };
