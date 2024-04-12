@@ -47,3 +47,24 @@
 //  ) {
 //   return (petDogIsPresent && !archerIsAwake) || (!petDogIsPresent && prisonerIsAwake && !knightIsAwake && !archerIsAwake);
 // }
+
+// *****************************************************************************//
+
+// Freelancer Rates
+// const HOUR_DAY_WORK = 8;
+// const BILLABLE_DAYS = 22;
+//
+// export function dayRate(ratePerHour) {
+//   return ratePerHour * HOUR_DAY_WORK;
+// }
+//
+// export function daysInBudget(budget, ratePerHour) {
+//   return Math.floor(budget / dayRate(ratePerHour));
+// }
+//
+// export function priceWithMonthlyDiscount(ratePerHour, numDays, discount) {
+//   const FULL_MONTHS = Math.floor(numDays / BILLABLE_DAYS);
+//   const REMAINING_DAYS = numDays % BILLABLE_DAYS;
+//   const FULL_MONTH_PRICE = FULL_MONTHS * BILLABLE_DAYS * dayRate(ratePerHour);
+//   return Math.ceil((FULL_MONTH_PRICE - discount * FULL_MONTH_PRICE) + (REMAINING_DAYS * dayRate(ratePerHour)));
+// }
