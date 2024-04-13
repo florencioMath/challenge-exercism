@@ -68,3 +68,28 @@
 //   const FULL_MONTH_PRICE = FULL_MONTHS * BILLABLE_DAYS * dayRate(ratePerHour);
 //   return Math.ceil((FULL_MONTH_PRICE - discount * FULL_MONTH_PRICE) + (REMAINING_DAYS * dayRate(ratePerHour)));
 // }
+
+// *****************************************************************************//
+
+// Poetry Club Door Policy
+//
+// export function frontDoorResponse(line) {
+//   return line[0];
+// }
+//
+// export function frontDoorPassword(word) {
+//   const FIRST_LETTER = word[0].toUpperCase();
+//   const REST_OF_WORD = word.slice(1, word.length).toLowerCase();
+//   const FORMATED_WORD = FIRST_LETTER + REST_OF_WORD;
+//   return FORMATED_WORD;
+// }
+//
+// export function backDoorResponse(line) {
+//   return line.trim()[line.trim().length - 1]
+// }
+//
+// export function backDoorPassword(word) {
+//   return frontDoorPassword(word) + ', please';
+// }
+
+// *****************************************************************************//
