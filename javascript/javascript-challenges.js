@@ -163,3 +163,33 @@
 // }
 
 // *****************************************************************************//
+
+// Bird Watcher
+// export function totalBirdCount(birdsPerDay) {
+//   let TOTAL_OF_BIRDS = 0;
+//   for(let i = 0; i < birdsPerDay.length; i++) {
+//     TOTAL_OF_BIRDS += birdsPerDay[i];
+//   }
+//   return TOTAL_OF_BIRDS;
+// }
+//
+// export function birdsInWeek(birdsPerDay, week) {
+//   const WEEK_TO_COUNT = week;
+//   const ARRAY_OF_BIRDS = birdsPerDay.slice((week - 1) * 7, (week - 1) * 7 + 7);
+//   return totalBirdCount(ARRAY_OF_BIRDS);
+// }
+//
+// export function fixBirdCountLog(birdsPerDay) {
+//   let INDEX_TO_INCREMENT = 1;
+//   for(let i = 0; i < birdsPerDay.length; i++) {
+//     if(INDEX_TO_INCREMENT%2 !== 0) {
+//       birdsPerDay[i] = birdsPerDay[i] + 1;
+//     } else {
+//       birdsPerDay[i] = birdsPerDay[i];
+//     }
+//     ++INDEX_TO_INCREMENT;
+//   }
+//   return birdsPerDay;
+// }
+
+// *****************************************************************************//
