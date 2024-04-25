@@ -193,3 +193,57 @@
 // }
 
 // *****************************************************************************//
+
+// Mixed Juices
+// export function timeToMixJuice(name) {
+//   switch (name) {
+//     case 'Pure Strawberry Joy':
+//       return 0.5;
+//       break;
+//     case 'Energizer':
+//       return 1.5;
+//       break;
+//     case 'Green Garden':
+//       return 1.5;
+//       break;
+//     case 'Tropical Island':
+//       return 3;
+//       break;
+//     case 'All or Nothing':
+//       return 5;
+//       break;
+//     default :
+//       return 2.5
+//   }
+// }
+//
+// export function limesToCut(wedgesNeeded, limes) {
+//   let limesCuted = 0;
+//   while(wedgesNeeded > 0 && limes.length > 0) {
+//     wedgesNeeded -= wedgesSize(limes[0]);
+//     limes.shift();
+//     limesCuted++;
+//   }
+//   return limesCuted;
+// }
+//
+// export function wedgesSize(size) {
+//   switch (size) {
+//     case 'small':
+//       return 6;
+//     case 'medium':
+//       return 8;
+//     case 'large':
+//       return 10;
+//   }
+// }
+//
+// export function remainingOrders(timeLeft, orders) {
+//   do {
+//     timeLeft -= timeToMixJuice(orders[0]);
+//     orders.shift();
+//   } while(timeLeft > 0 && orders.length >= 0);
+//   return orders;
+// }
+
+// *****************************************************************************//
