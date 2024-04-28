@@ -135,3 +135,175 @@
 // }
 
 // *****************************************************************************//
+
+// Vehicle Purchase
+// export function needsLicense(kind) {
+//   if(kind === 'car' || kind === 'truck'){
+//     return true;
+//   }
+//   return false;
+// }
+//
+// export function chooseVehicle(option1, option2) {
+//   if(option1 <= option2) {
+//     return option1 + ' is clearly the better choice.';
+//   } else {
+//     return option2 + ' is clearly the better choice.';
+//   }
+// }
+//
+// export function calculateResellPrice(originalPrice, age) {
+//   if(age < 3) {
+//     return (80 / 100) * originalPrice;
+//   } else if(age >= 3 && age <= 10) {
+//     return (70 / 100) * originalPrice;
+//   } else {
+//     return (50 / 100) * originalPrice;
+//   }
+// }
+
+// *****************************************************************************//
+
+// Bird Watcher
+// export function totalBirdCount(birdsPerDay) {
+//   let TOTAL_OF_BIRDS = 0;
+//   for(let i = 0; i < birdsPerDay.length; i++) {
+//     TOTAL_OF_BIRDS += birdsPerDay[i];
+//   }
+//   return TOTAL_OF_BIRDS;
+// }
+//
+// export function birdsInWeek(birdsPerDay, week) {
+//   const WEEK_TO_COUNT = week;
+//   const ARRAY_OF_BIRDS = birdsPerDay.slice((week - 1) * 7, (week - 1) * 7 + 7);
+//   return totalBirdCount(ARRAY_OF_BIRDS);
+// }
+//
+// export function fixBirdCountLog(birdsPerDay) {
+//   let INDEX_TO_INCREMENT = 1;
+//   for(let i = 0; i < birdsPerDay.length; i++) {
+//     if(INDEX_TO_INCREMENT%2 !== 0) {
+//       birdsPerDay[i] = birdsPerDay[i] + 1;
+//     } else {
+//       birdsPerDay[i] = birdsPerDay[i];
+//     }
+//     ++INDEX_TO_INCREMENT;
+//   }
+//   return birdsPerDay;
+// }
+
+// *****************************************************************************//
+
+// Mixed Juices
+// export function timeToMixJuice(name) {
+//   switch (name) {
+//     case 'Pure Strawberry Joy':
+//       return 0.5;
+//       break;
+//     case 'Energizer':
+//       return 1.5;
+//       break;
+//     case 'Green Garden':
+//       return 1.5;
+//       break;
+//     case 'Tropical Island':
+//       return 3;
+//       break;
+//     case 'All or Nothing':
+//       return 5;
+//       break;
+//     default :
+//       return 2.5
+//   }
+// }
+//
+// export function limesToCut(wedgesNeeded, limes) {
+//   let limesCuted = 0;
+//   while(wedgesNeeded > 0 && limes.length > 0) {
+//     wedgesNeeded -= wedgesSize(limes[0]);
+//     limes.shift();
+//     limesCuted++;
+//   }
+//   return limesCuted;
+// }
+//
+// export function wedgesSize(size) {
+//   switch (size) {
+//     case 'small':
+//       return 6;
+//     case 'medium':
+//       return 8;
+//     case 'large':
+//       return 10;
+//   }
+// }
+//
+// export function remainingOrders(timeLeft, orders) {
+//   do {
+//     timeLeft -= timeToMixJuice(orders[0]);
+//     orders.shift();
+//   } while(timeLeft > 0 && orders.length >= 0);
+//   return orders;
+// }
+
+// *****************************************************************************//
+
+// High Score Board
+// export function createScoreBoard() {
+//   return {'The Best Ever': 1000000 }
+//  }
+
+//  export function addPlayer(scoreBoard, player, score) {
+//    scoreBoard[player] = score;
+//    return scoreBoard;
+//  }
+
+//  export function removePlayer(scoreBoard, player) {
+//    delete scoreBoard[player];
+//    return scoreBoard;
+//  }
+
+//  export function updateScore(scoreBoard, player, points) {
+//    scoreBoard[player] += points;
+//    return scoreBoard;
+//  }
+
+//  export function applyMondayBonus(scoreBoard) {
+//    for(let key in scoreBoard) {
+//      scoreBoard[key] += 100;
+//    }
+//    return scoreBoard;
+//  }
+
+//  export function normalizeScore(params) {
+//    return params.normalizeFunction(params.score);
+//  }
+
+// *****************************************************************************//
+
+// Amusement Park
+// export function createVisitor(name, age, ticketId) {
+//   return {name: name, age: age, ticketId: ticketId};
+// }
+//
+// export function revokeTicket(visitor) {
+//   visitor["ticketId"] = null;
+//   return visitor;
+// }
+//
+// export function ticketStatus(tickets, ticketId) {
+//   if(tickets[ticketId] === null) return "not sold";
+//
+//   if(tickets[ticketId] === undefined) return "unknown ticket id";
+//   if(tickets[ticketId] === tickets[ticketId]) return "sold to " + tickets[ticketId];
+// }
+//
+// export function simpleTicketStatus(tickets, ticketId) {
+//   return tickets[ticketId] ?? "invalid ticket !!!";
+// }
+//
+// export function gtcVersion(visitor) {
+//   return visitor.gtc?.version;
+// }
+
+// *****************************************************************************//
