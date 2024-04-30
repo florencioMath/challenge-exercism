@@ -307,3 +307,21 @@
 // }
 
 // *****************************************************************************//
+
+// Lucky Numbers
+// export function twoSum(array1, array2) {
+//   return Number(array1.join('')) + Number(array2.join(''));
+// }
+//
+// export function luckyNumber(value) {
+//   const ARRAY_REVERSED = String(value).split('').reverse();
+//   return value === Number(ARRAY_REVERSED.join(''));
+// }
+//
+// export function errorMessage(input) {
+//   if(!Boolean(input)) return 'Required field';
+//   if(!Number(input)) return 'Must be a number besides 0';
+//   return '';
+// }
+
+// *****************************************************************************//
