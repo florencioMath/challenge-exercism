@@ -325,3 +325,41 @@
 // }
 
 // *****************************************************************************//
+
+// Lasagna Master
+// export function cookingStatus(remainingTime) {
+//   if(remainingTime === undefined) return 'You forgot to set the timer.';
+//
+//   if(remainingTime === 0) return 'Lasagna is done.';
+//
+//   return 'Not done, please wait.';
+// }
+//
+// export function preparationTime(layers, timePerLayer = 2) {
+//   return layers.length * timePerLayer;
+// }
+//
+// export function quantities(layers) {
+//   let amountOfNoodles = 0;
+//   let amountOfSauce = 0;
+//   for(let i = 0; i < layers.length; i++) {
+//     if(layers[i] === 'noodles') amountOfNoodles += 50;
+//     if(layers[i] === 'sauce') amountOfSauce += 0.2;
+//   }
+//
+//   return {noodles: amountOfNoodles, sauce: amountOfSauce};
+// }
+//
+// export function addSecretIngredient(friendsList, myList) {
+//   myList.push(friendsList[friendsList.length - 1]);
+// }
+//
+// export function scaleRecipe(recipe, portions) {
+//   const scaledRecipe = {};
+//   for(const portion in recipe) {
+//     scaledRecipe[portion] =  recipe[portion] * portions / 2;
+//   }
+//   return scaledRecipe;
+// }
+
+// *****************************************************************************//
