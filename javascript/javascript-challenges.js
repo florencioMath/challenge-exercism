@@ -363,3 +363,32 @@
 // }
 
 // *****************************************************************************//
+
+// Elyses Destructured Enchantments
+// export function getFirstCard(deck) {
+//   const [FIRST_CARD] = deck;
+//   return FIRST_CARD;
+// }
+//
+// export function getSecondCard(deck) {
+//  const [FIRST_CARD, SECOND_CARD] = deck;
+//  return SECOND_CARD;
+// }
+//
+// export function swapTopTwoCards(deck) {
+//   const [FIRST_CARD, SECOND_CARD, ...everythingElse] = deck;
+//   return [SECOND_CARD, FIRST_CARD, ...everythingElse];
+// }
+//
+// export function discardTopCard(deck) {
+//   const [TOP_CARD, ...everythingElse] = deck;
+//   return [TOP_CARD, [...everythingElse]];
+// }
+//
+// const FACE_CARDS = ['jack', 'queen', 'king'];
+// export function insertFaceCards(deck) {
+//   const [FIRST_CARD, ...everythingElse] = deck;
+//   return [FIRST_CARD, ...FACE_CARDS, ...everythingElse];
+// }
+
+// *****************************************************************************//
