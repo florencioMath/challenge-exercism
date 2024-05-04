@@ -307,3 +307,88 @@
 // }
 
 // *****************************************************************************//
+
+// Lucky Numbers
+// export function twoSum(array1, array2) {
+//   return Number(array1.join('')) + Number(array2.join(''));
+// }
+//
+// export function luckyNumber(value) {
+//   const ARRAY_REVERSED = String(value).split('').reverse();
+//   return value === Number(ARRAY_REVERSED.join(''));
+// }
+//
+// export function errorMessage(input) {
+//   if(!Boolean(input)) return 'Required field';
+//   if(!Number(input)) return 'Must be a number besides 0';
+//   return '';
+// }
+
+// *****************************************************************************//
+
+// Lasagna Master
+// export function cookingStatus(remainingTime) {
+//   if(remainingTime === undefined) return 'You forgot to set the timer.';
+//
+//   if(remainingTime === 0) return 'Lasagna is done.';
+//
+//   return 'Not done, please wait.';
+// }
+//
+// export function preparationTime(layers, timePerLayer = 2) {
+//   return layers.length * timePerLayer;
+// }
+//
+// export function quantities(layers) {
+//   let amountOfNoodles = 0;
+//   let amountOfSauce = 0;
+//   for(let i = 0; i < layers.length; i++) {
+//     if(layers[i] === 'noodles') amountOfNoodles += 50;
+//     if(layers[i] === 'sauce') amountOfSauce += 0.2;
+//   }
+//
+//   return {noodles: amountOfNoodles, sauce: amountOfSauce};
+// }
+//
+// export function addSecretIngredient(friendsList, myList) {
+//   myList.push(friendsList[friendsList.length - 1]);
+// }
+//
+// export function scaleRecipe(recipe, portions) {
+//   const scaledRecipe = {};
+//   for(const portion in recipe) {
+//     scaledRecipe[portion] =  recipe[portion] * portions / 2;
+//   }
+//   return scaledRecipe;
+// }
+
+// *****************************************************************************//
+
+// Elyses Destructured Enchantments
+// export function getFirstCard(deck) {
+//   const [FIRST_CARD] = deck;
+//   return FIRST_CARD;
+// }
+//
+// export function getSecondCard(deck) {
+//  const [FIRST_CARD, SECOND_CARD] = deck;
+//  return SECOND_CARD;
+// }
+//
+// export function swapTopTwoCards(deck) {
+//   const [FIRST_CARD, SECOND_CARD, ...everythingElse] = deck;
+//   return [SECOND_CARD, FIRST_CARD, ...everythingElse];
+// }
+//
+// export function discardTopCard(deck) {
+//   const [TOP_CARD, ...everythingElse] = deck;
+//   return [TOP_CARD, [...everythingElse]];
+// }
+//
+// const FACE_CARDS = ['jack', 'queen', 'king'];
+// export function insertFaceCards(deck) {
+//   const [FIRST_CARD, ...everythingElse] = deck;
+//   return [FIRST_CARD, ...FACE_CARDS, ...everythingElse];
+// }
+
+// *****************************************************************************//
