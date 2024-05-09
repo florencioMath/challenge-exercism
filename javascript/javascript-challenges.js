@@ -392,3 +392,38 @@
 // }
 
 // *****************************************************************************//
+
+// Coordinate Transformation
+// export function translate2d(dx, dy) {
+//   return function moveCoordinatesRight2Px(x, y) {
+//     return [dx + x, dy + y];
+//   }
+// }
+//
+// export function scale2d(sx, sy) {
+//   return function doubleScale(x, y) {
+//     return [sx * x, sy * y];
+//   }
+// }
+//
+// export function composeTransform(f, g) {
+//    function compose(x, y) {
+//         const composedFunc = f(x, y);
+//         return g(composedFunc[0], composedFunc[1]);
+//     }
+//     return compose;
+// }
+//
+// export function memoizeTransform(f) {
+//   let lastInput = [];
+//   let lastResult = [];
+//   function memoize(a, b) {
+//     if (lastInput[0] == a  && lastInput[1] == b) return lastResult
+//     lastInput = [a, b];
+//     lastResult = f(a, b);
+//     return lastResult;
+//  }
+//   return memoize;
+// }
+
+// *****************************************************************************//
