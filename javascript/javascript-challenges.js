@@ -485,3 +485,25 @@
 // }
 
 // *****************************************************************************//
+
+// Elyses Looping Enchantments
+// export function cardTypeCheck(stack, card) {
+//   let sameType = 0;
+
+//   stack.forEach((stackCard) => {
+//     if(stackCard === card) sameType++;
+//   });
+//   return sameType;
+// }
+
+// export function determineOddEvenCards(stack, type) {
+//   let count = 0;
+//   const evenOrOdd = type ? 0 : 1;
+
+//   for (const card of stack) {
+//     if(card % 2 === evenOrOdd) count++;
+//   }
+//   return count;
+// }
+
+// *****************************************************************************//
