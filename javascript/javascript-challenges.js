@@ -549,3 +549,58 @@
 // }
 
 // *****************************************************************************//
+
+// Pizza Order
+// Solution 1 - Without Recursion
+// const priceMargherita = 7;
+// const priceCaprese = 9;
+// const priceFormaggio = 10;
+// const priceExtraSauce = 1;
+// const priceExtraToppings = 2;
+//
+// export function pizzaPrice(pizza, ...extras) {
+//   let total = 0;
+//   if(pizza === 'Margherita') total += priceMargherita;
+//   if(pizza === 'Caprese') total += priceCaprese;
+//   if(pizza === 'Formaggio') total += priceFormaggio;
+//   if(extras.length <= 0) {
+//     return total;
+//   } else {
+//       for (let i = 0; i < extras.length; i++) {
+//         if(extras[i] === 'ExtraSauce') total += 1;
+//         if(extras[i] === 'ExtraToppings') total += 2;
+//     }
+//   }
+//   return total;
+// }
+//
+// export function orderPrice(pizzaOrders) {
+//   let total = 0;
+//
+//   if(!pizzaOrders) return total;
+//   for (let i = 0; i < pizzaOrders.length; i++) {
+//     total += pizzaPrice(pizzaOrders[i].pizza, ...pizzaOrders[i].extras);
+//   }
+//
+//   return total;
+// }
+
+// Solution 2 - With Recursion
+// const PRICES = {
+//   Margherita: 7,
+//   Caprese: 9,
+//   Formaggio: 10,
+//   ExtraSauce: 1,
+//   ExtraToppings: 2
+// }
+//
+// export function pizzaPrice(pizza, ...extras) {
+//   if(extras.length <= 0) return PRICES[pizza];
+//   return PRICES[pizza] + pizzaPrice(...extras);
+// }
+//
+// export function orderPrice(pizzaOrders) {
+//   return pizzaOrders.reduce((result, order) => result + pizzaPrice(order.pizza, ...order.extras), 0);
+// }
+
+// *****************************************************************************//
