@@ -507,3 +507,45 @@
 // }
 
 // *****************************************************************************//
+
+// Elyses Transformative Enchantments
+// export function seeingDouble(deck) {
+//   return deck.map((card) => card += card);
+// }
+//
+// export function threeOfEachThree(deck) {
+//   return deck.reduce((acc, cur) => {
+//     if(cur === 3)acc.splice(acc.length + 1, 0, 3, 3);
+//     return [...acc, cur]
+//   }, [])
+// }
+//
+// export function middleTwo(deck) {
+//   const deckMiddle = Math.round(deck.length / 2) - 1;
+//   const cardsToCut = deckMiddle + 2;
+//
+//   return deck.slice(deckMiddle, cardsToCut);
+// }
+//
+// export function sandwichTrick(deck) {
+//   const middleDeck = Math.floor(deck.length / 2) - 1;
+//   const firstCard = deck.shift();
+//   const lastCard = deck.pop();
+//
+//   deck.splice(middleDeck, 0, lastCard, firstCard);
+//   return deck;
+// }
+//
+// export function twoIsSpecial(deck) {
+//   return deck.filter((card) => card === 2);
+// }
+//
+// export function perfectlyOrdered(deck) {
+//   return deck.sort((n1, n2) => n1 < n2 ? -1 : 1);
+// }
+//
+// export function reorder(deck) {
+//   return deck.reverse();
+// }
+
+// *****************************************************************************//
