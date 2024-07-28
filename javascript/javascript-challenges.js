@@ -485,3 +485,142 @@
 // }
 
 // *****************************************************************************//
+
+// Elyses Looping Enchantments
+// export function cardTypeCheck(stack, card) {
+//   let sameType = 0;
+
+//   stack.forEach((stackCard) => {
+//     if(stackCard === card) sameType++;
+//   });
+//   return sameType;
+// }
+
+// export function determineOddEvenCards(stack, type) {
+//   let count = 0;
+//   const evenOrOdd = type ? 0 : 1;
+
+//   for (const card of stack) {
+//     if(card % 2 === evenOrOdd) count++;
+//   }
+//   return count;
+// }
+
+// *****************************************************************************//
+
+// Elyses Transformative Enchantments
+// export function seeingDouble(deck) {
+//   return deck.map((card) => card += card);
+// }
+//
+// export function threeOfEachThree(deck) {
+//   return deck.reduce((acc, cur) => {
+//     if(cur === 3)acc.splice(acc.length + 1, 0, 3, 3);
+//     return [...acc, cur]
+//   }, [])
+// }
+//
+// export function middleTwo(deck) {
+//   const deckMiddle = Math.round(deck.length / 2) - 1;
+//   const cardsToCut = deckMiddle + 2;
+//
+//   return deck.slice(deckMiddle, cardsToCut);
+// }
+//
+// export function sandwichTrick(deck) {
+//   const middleDeck = Math.floor(deck.length / 2) - 1;
+//   const firstCard = deck.shift();
+//   const lastCard = deck.pop();
+//
+//   deck.splice(middleDeck, 0, lastCard, firstCard);
+//   return deck;
+// }
+//
+// export function twoIsSpecial(deck) {
+//   return deck.filter((card) => card === 2);
+// }
+//
+// export function perfectlyOrdered(deck) {
+//   return deck.sort((n1, n2) => n1 < n2 ? -1 : 1);
+// }
+//
+// export function reorder(deck) {
+//   return deck.reverse();
+// }
+
+// *****************************************************************************//
+
+// Pizza Order
+// Solution 1 - Without Recursion
+// const priceMargherita = 7;
+// const priceCaprese = 9;
+// const priceFormaggio = 10;
+// const priceExtraSauce = 1;
+// const priceExtraToppings = 2;
+//
+// export function pizzaPrice(pizza, ...extras) {
+//   let total = 0;
+//   if(pizza === 'Margherita') total += priceMargherita;
+//   if(pizza === 'Caprese') total += priceCaprese;
+//   if(pizza === 'Formaggio') total += priceFormaggio;
+//   if(extras.length <= 0) {
+//     return total;
+//   } else {
+//       for (let i = 0; i < extras.length; i++) {
+//         if(extras[i] === 'ExtraSauce') total += 1;
+//         if(extras[i] === 'ExtraToppings') total += 2;
+//     }
+//   }
+//   return total;
+// }
+//
+// export function orderPrice(pizzaOrders) {
+//   let total = 0;
+//
+//   if(!pizzaOrders) return total;
+//   for (let i = 0; i < pizzaOrders.length; i++) {
+//     total += pizzaPrice(pizzaOrders[i].pizza, ...pizzaOrders[i].extras);
+//   }
+//
+//   return total;
+// }
+
+// Solution 2 - With Recursion
+// const PRICES = {
+//   Margherita: 7,
+//   Caprese: 9,
+//   Formaggio: 10,
+//   ExtraSauce: 1,
+//   ExtraToppings: 2
+// }
+//
+// export function pizzaPrice(pizza, ...extras) {
+//   if(extras.length <= 0) return PRICES[pizza];
+//   return PRICES[pizza] + pizzaPrice(...extras);
+// }
+//
+// export function orderPrice(pizzaOrders) {
+//   return pizzaOrders.reduce((result, order) => result + pizzaPrice(order.pizza, ...order.extras), 0);
+// }
+
+// *****************************************************************************//
+
+// Custom Signs
+// export function buildSign(occasion, name) {
+//   return `Happy ${occasion} ${name}!`;
+// }
+//
+// export function buildBirthdaySign(age) {
+//   return `Happy Birthday! What a ${age >= 50 ? 'mature' : 'young'} fellow you are.`;
+// }
+//
+// export function graduationFor(name, year) {
+//   return `Congratulations ${name}!\nClass of ${year}`;
+// }
+//
+// export function costOf(sign, currency) {
+//   const SIGN_PRICE = (sign.length * 2 + 20).toFixed(2);
+//   return `Your sign costs ${SIGN_PRICE} ${currency}.`
+// }
+
+// *****************************************************************************//
