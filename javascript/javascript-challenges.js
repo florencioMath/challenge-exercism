@@ -684,3 +684,34 @@
 // }
 
 // *****************************************************************************//
+
+// Ozan's Playlist
+// export function removeDuplicates(playlist) {
+//   return Array.from(new Set(playlist));
+// }
+//
+// export function hasTrack(playlist, track) {
+//   return new Set(playlist).has(track);
+// }
+//
+// export function addTrack(playlist, track) {
+//   return Array.from(new Set(playlist).add(track));
+// }
+//
+// export function deleteTrack(playlist, track) {
+//   const newPlaylist = new Set(playlist);
+//   newPlaylist.delete(track)
+//   return Array.from(newPlaylist);
+// }
+//
+// export function listArtists(playlist) {
+//   let artists = [];
+//   playlist.forEach((track) => {
+//     artists.push(track.split(' - ')[1]);
+//   });
+//
+//   // return Array.from(new Set(playlist.map((track) => track.split(' - ').pop()))); - Apenas 1 linha
+//   return removeDuplicates(artists);
+// }
+
+// *****************************************************************************//
