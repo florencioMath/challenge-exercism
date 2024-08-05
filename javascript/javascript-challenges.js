@@ -624,3 +624,199 @@
 // }
 
 // *****************************************************************************//
+
+// Windowing System
+// export function Size(width = 80, height = 60) {
+//   this.width = width;
+//   this.height = height;
+// }
+//
+// Size.prototype.resize = function resize(newWidth, newHeight) {
+//   this.width = newWidth;
+//   this.height = newHeight;
+// }
+//
+// export function Position(x = 0, y = 0) {
+//   this.x = x;
+//   this.y = y;
+// }
+//
+// Position.prototype.move = function move(newX, newY) {
+//   this.x = newX;
+//   this.y = newY;
+// }
+//
+// export class ProgramWindow {
+//   constructor() {
+//     this.screenSize = new Size(800, 600);
+//     this.size = new Size();
+//     this.position = new Position();
+//   }
+//
+//   resize(newSize) {
+//     const maxWidth = this.screenSize.width - this.position.x;
+//     const maxHeight = this.screenSize.height - this.position.y;
+//
+//     const newWidth = Math.max(1, Math.min(newSize.width, maxWidth));
+//     const newHeight = Math.max(1, Math.min(newSize.height, maxHeight));
+//
+//     this.size.resize(newWidth, newHeight);
+//   }
+//
+//   move(newPosition) {
+//     const maxX = this.screenSize.width - this.size.width;
+//     const maxY = this.screenSize.height - this.size.height;
+//
+//     const newX = Math.max(0, Math.min(newPosition.x, maxX));
+//     const newY = Math.max(0, Math.min(newPosition.y, maxY));
+//
+//     this.position.move(newX, newY);
+//   }
+// }
+//
+// export function changeWindow(programWindow) {
+//   programWindow.move(new Position());
+//
+//   programWindow.resize(new Size(400, 300));
+//   programWindow.move(new Position(100, 150));
+//
+//   return programWindow;
+// }
+
+// *****************************************************************************//
+
+// Ozan's Playlist
+// export function removeDuplicates(playlist) {
+//   return Array.from(new Set(playlist));
+// }
+//
+// export function hasTrack(playlist, track) {
+//   return new Set(playlist).has(track);
+// }
+//
+// export function addTrack(playlist, track) {
+//   return Array.from(new Set(playlist).add(track));
+// }
+//
+// export function deleteTrack(playlist, track) {
+//   const newPlaylist = new Set(playlist);
+//   newPlaylist.delete(track)
+//   return Array.from(newPlaylist);
+// }
+//
+// export function listArtists(playlist) {
+//   let artists = [];
+//   playlist.forEach((track) => {
+//     artists.push(track.split(' - ')[1]);
+//   });
+//
+//   // return Array.from(new Set(playlist.map((track) => track.split(' - ').pop()))); - Apenas 1 linha
+//   return removeDuplicates(artists);
+// }
+
+// *****************************************************************************//
+
+// Factory Sensors
+// export class ArgumentError extends Error {}
+//
+// export class OverheatingError extends Error {
+//   constructor(temperature) {
+//     super(`The temperature is ${temperature} ! Overheating !`);
+//     this.temperature = temperature;
+//   }
+// }
+//
+// export function checkHumidityLevel(humidityPercentage) {
+//   if(humidityPercentage >= 70) throw new Error('Humidity exceeds 70%!');
+// }
+//
+// export function reportOverheating(temperature) {
+//   if(temperature === null) throw new ArgumentError;
+//   if(temperature >= 500) throw new OverheatingError(temperature);
+// }
+//
+// export function monitorTheMachine(actions) {
+//   try {
+//     actions.check();
+//   } catch (error) {
+//     if(error instanceof ArgumentError) {
+//       return actions.alertDeadSensor();
+//     }
+//
+//     if(error instanceof OverheatingError) {
+//       if(error.temperature >= 600) return actions.shutdown();
+//       return actions.alertOverheating();
+//     }
+//
+//     return actions.check();
+//   }
+// }
+
+// *****************************************************************************//
+
+// Translation Service
+// export class TranslationService {
+//
+//   constructor(api) {
+//     this.api = api;
+//   }
+//
+//   free(text) {
+//     return this.api.fetch(text).then(function (response) {
+//       return response.translation;
+//     }).catch(function (error) {
+//         throw error;
+//     });
+//   }
+//
+//   batch(texts) {
+//     if(texts.length === 0) {
+//       return Promise.reject(new BatchIsEmpty());
+//     }
+//     const freePromises = texts.map(text => this.free(text));
+//     return Promise.all(freePromises)
+//       .then(function(responses) {
+//         return responses;
+//       })
+//       .catch(function(error) {
+//         return Promise.reject(error);
+//       });
+//   }
+//
+//   request(text) {
+//     const newRequest = () => new Promise((resolve, reject) => {
+//       this.api.request(text, (result) => {
+//         result ? reject(result) : resolve();
+//       })
+//     })
+//     return newRequest().catch(newRequest).catch(newRequest);
+//   }
+//
+//   premium(text, minimumQuality) {
+//     return this.api.fetch(text)
+//       .catch(() => {
+//         return this.request(text).then(() => this.api.fetch(text));
+//       })
+//       .then((response) => {
+//         if(response.quality < minimumQuality) {
+//           throw new QualityThresholdNotMet();
+//         }
+//         return response.translation;
+//       })
+//   }
+// }
+//
+// export class QualityThresholdNotMet extends Error {
+//   constructor(text) {
+//     super(`The translation of ${text} does not meet the requested quality threshold.`.trim(),);
+//     this.text = text;
+//   }
+// }
+//
+// export class BatchIsEmpty extends Error {
+//   constructor() {
+//     super(`Requested a batch translation, but there are no texts in the batch.`.trim(),);
+//   }
+// }
+
+// *****************************************************************************//
