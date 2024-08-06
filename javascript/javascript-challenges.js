@@ -820,3 +820,37 @@
 // }
 
 // *****************************************************************************//
+
+// Regular Chatbot
+// export function isValidCommand(command) {
+//   return /chatbot/.test(command.toLowerCase().split(/[,.\s]/)[0]);
+// }
+//
+// export function removeEmoji(message) {
+//   const regex = new RegExp(/emoji[0-9]{4}/, 'gi');
+//
+//   return message.replace(regex, '');
+// }
+//
+// export function checkPhoneNumber(number) {
+//   const regex = new RegExp(/^\(\+\d{2}\) \d{3}-\d{3}-\d{3}$/);
+//   const msgValid = "Thanks! You can now download me to your phone.";
+//   const msgInvalid = `Oops, it seems like I can't reach out to ${number}`
+//
+//   return regex.test(number) ? msgValid : msgInvalid;
+// }
+//
+// export function getURL(userInput) {
+//   return userInput.split(/[ ]/).filter((string) => (/[.]/).test(string));
+// }
+//
+// export function niceToMeetYou(fullName) {
+//   const greetings = 'Nice to meet you, ';
+//   const name = fullName.replace(',', '').split(/[ ]/).reverse().join(' ');
+//   return greetings + name;
+//
+//   // const [lastName, firstName] = fullName.split(", ");
+//   // return "Nice to meet you, " + firstName + " " + lastName;
+// }
+
+// *****************************************************************************//
