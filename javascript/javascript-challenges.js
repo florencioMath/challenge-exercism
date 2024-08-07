@@ -871,3 +871,31 @@
 //
 
 // *****************************************************************************//
+
+// Resistor Color Duo
+// export const decodedValue = (colorsToFind) => {
+//   // One line
+//   // return Number(COLORS.map((color, i) => COLORS.indexOf(colorsToFind[i])).filter(i => i != -1).slice(0, 2).join(''));
+//
+//   const [firstColor, secondColor] = colorsToFind;
+//   const firstValue = COLORS[firstColor];
+//   const secondValue = COLORS[secondColor];
+//
+//   return Number(`${firstValue}${secondValue}`);
+// };
+//
+// const COLORS = {
+//   black: 0,
+//   brown: 1,
+//   red: 2,
+//   orange: 3,
+//   yellow: 4,
+//   green: 5,
+//   blue: 6,
+//   violet: 7,
+//   grey: 8,
+//   white: 9,
+// };
+//
+
+// *****************************************************************************//
