@@ -908,3 +908,28 @@
 // };
 
 // *****************************************************************************//
+
+// RNA Transcription
+// export const toRna = (transcription) => {
+//   // With Map
+//   // const arrayDNA = transcription.split('');
+//   // const arrayRNA = arrayDNA.map(letter => DNA[letter]).join('');
+//   // return arrayRNA;
+//   // With for of
+//   // let RNA = '';
+//   // for (let letter of transcription) {
+//   //   RNA += DNA[letter];
+//   // }
+//   // return RNA;
+//   // With Reduce
+//   return transcription.split('').reduce((rna, letter) => rna + DNA[letter], '');
+// };
+// export const DNA = {
+//   G: 'C',
+//   C: 'G',
+//   T: 'A',
+//   A: 'U',
+// }
+//
+
+// *****************************************************************************//
