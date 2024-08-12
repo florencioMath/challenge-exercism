@@ -820,3 +820,91 @@
 // }
 
 // *****************************************************************************//
+
+// Regular Chatbot
+// export function isValidCommand(command) {
+//   return /chatbot/.test(command.toLowerCase().split(/[,.\s]/)[0]);
+// }
+//
+// export function removeEmoji(message) {
+//   const regex = new RegExp(/emoji[0-9]{4}/, 'gi');
+//
+//   return message.replace(regex, '');
+// }
+//
+// export function checkPhoneNumber(number) {
+//   const regex = new RegExp(/^\(\+\d{2}\) \d{3}-\d{3}-\d{3}$/);
+//   const msgValid = "Thanks! You can now download me to your phone.";
+//   const msgInvalid = `Oops, it seems like I can't reach out to ${number}`
+//
+//   return regex.test(number) ? msgValid : msgInvalid;
+// }
+//
+// export function getURL(userInput) {
+//   return userInput.split(/[ ]/).filter((string) => (/[.]/).test(string));
+// }
+//
+// export function niceToMeetYou(fullName) {
+//   const greetings = 'Nice to meet you, ';
+//   const name = fullName.replace(',', '').split(/[ ]/).reverse().join(' ');
+//   return greetings + name;
+//
+//   // const [lastName, firstName] = fullName.split(", ");
+//   // return "Nice to meet you, " + firstName + " " + lastName;
+// }
+
+// *****************************************************************************//
+
+// Two Fer
+// export const twoFer = (name) => {
+//   return name ? `One for ${name}, one for me.` : 'One for you, one for me.';
+// };
+
+// *****************************************************************************//
+
+// Resistor Color
+// export const colorCode = (color) => {
+//   return COLORS.indexOf(color);
+// };
+//
+// export const COLORS = ['black', 'brown', 'red', 'orange', 'yellow', 'green', 'blue', 'violet', 'grey', 'white',];
+//
+
+// *****************************************************************************//
+
+// Resistor Color Duo
+// export const decodedValue = (colorsToFind) => {
+//   // One line
+//   // return Number(COLORS.map((color, i) => COLORS.indexOf(colorsToFind[i])).filter(i => i != -1).slice(0, 2).join(''));
+//
+//   const [firstColor, secondColor] = colorsToFind;
+//   const firstValue = COLORS[firstColor];
+//   const secondValue = COLORS[secondColor];
+//
+//   return Number(`${firstValue}${secondValue}`);
+// };
+//
+// const COLORS = {
+//   black: 0,
+//   brown: 1,
+//   red: 2,
+//   orange: 3,
+//   yellow: 4,
+//   green: 5,
+//   blue: 6,
+//   violet: 7,
+//   grey: 8,
+//   white: 9,
+// };
+//
+
+// *****************************************************************************//
+
+// Gigasecond
+// export const gigasecond = (date) => {
+//   const gigaInMiliseconds = 1000000000 * 1000;
+//
+//   return new Date(date.getTime() + gigaInMiliseconds);
+// };
+
+// *****************************************************************************//
