@@ -954,6 +954,7 @@
 //     uranus: 84.016846,
 //     neptune: 164.79132
 // };
+//
 
 // *****************************************************************************//
 
@@ -961,13 +962,33 @@
 // export const isPangram = (setence) => {
 //   // With Spread and Every
 //   // return [...ALPHABET].every(char => setence.toLowerCase().includes(char));
-
+//
 //   const cleanSetence = setence.toLowerCase().replace(/[^a-z]/g, '');
 //   const newSetence = Array.from(new Set(cleanSetence)).sort().join('');
-
+//
 //   return newSetence === ALPHABET;
 // };
+//
 
 // export const ALPHABET = 'abcdefghijklmnopqrstuvwxyz';
+
+// *****************************************************************************//
+
+// Matrix
+// export class Matrix {
+//   constructor(string) {
+//     this.matrix = string.split('\n');
+//   }
+//
+//   get rows() {
+//     return this.matrix.map(row => row.split(' ').map(Number));
+//   }
+//   get columns() {
+//     return this.rows[0].map((_, i) => {
+//       return this.rows.map(row => row[i]);
+//     })
+//   }
+// }
+//
 
 // *****************************************************************************//
