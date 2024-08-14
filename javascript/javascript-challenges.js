@@ -956,3 +956,18 @@
 // };
 
 // *****************************************************************************//
+
+// Pangram
+// export const isPangram = (setence) => {
+//   // With Spread and Every
+//   // return [...ALPHABET].every(char => setence.toLowerCase().includes(char));
+
+//   const cleanSetence = setence.toLowerCase().replace(/[^a-z]/g, '');
+//   const newSetence = Array.from(new Set(cleanSetence)).sort().join('');
+
+//   return newSetence === ALPHABET;
+// };
+
+// export const ALPHABET = 'abcdefghijklmnopqrstuvwxyz';
+
+// *****************************************************************************//
