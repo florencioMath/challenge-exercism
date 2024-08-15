@@ -992,3 +992,27 @@
 //
 
 // *****************************************************************************//
+
+// Bob
+// export const hey = (message) => {
+//   const phrase = message.trim();
+//
+//   if(phrase === '') return ANSWER_SILENCE;
+//
+//   const isYelling = phrase === phrase.toUpperCase() && /[A-Z]/.test(phrase);
+//   const isQuestion = phrase.endsWith('?');
+//
+//   if(isYelling && isQuestion) return ANSWER_YELL_QUESTION;
+//   if(isYelling) return ANSWER_YELL;
+//   if(isQuestion) return ANSWER_QUESTION;
+//   return ANSWER_ANYTHING;
+// };
+//
+// export const ANSWER_QUESTION = "Sure.";
+// export const ANSWER_YELL = "Whoa, chill out!";
+// export const ANSWER_YELL_QUESTION = "Calm down, I know what I'm doing!";
+// export const ANSWER_SILENCE = "Fine. Be that way!";
+// export const ANSWER_ANYTHING = "Whatever.";
+//
+
+// *****************************************************************************//
