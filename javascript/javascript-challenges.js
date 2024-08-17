@@ -1016,3 +1016,32 @@
 //
 
 // *****************************************************************************//
+
+// Book Store
+// export const discountsPrice = {
+// 	0: 0,
+// 	1: 800,
+// 	2: 2 * 800 * 0.95,
+// 	3: 3 * 800 * 0.9,
+// 	4: 4 * 800 * 0.8,
+// 	5: 5 * 800 * 0.75,
+// };
+// export const cost = (books) => {
+//  let booksSet = [];
+//   while (books.length > 0) {
+//     booksSet.push(new Set(books).size);
+//     new Set(books).forEach((elem) => {
+//       books.splice(books.indexOf(elem), 1);
+//     });
+//   }
+//
+//   while (booksSet.includes(3) && booksSet.includes(5)) {
+// 		booksSet.splice(booksSet.indexOf(3), 1);
+// 		booksSet.splice(booksSet.indexOf(5), 1);
+// 		booksSet.push(4, 4);
+// 	}
+//   return booksSet.reduce((total, set) => (total += discountsPrice[set]), 0);
+// };
+//
+
+// *****************************************************************************//
