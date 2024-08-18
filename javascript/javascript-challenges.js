@@ -908,3 +908,179 @@
 // };
 
 // *****************************************************************************//
+
+// RNA Transcription
+// export const toRna = (transcription) => {
+//   // With Map
+//   // const arrayDNA = transcription.split('');
+//   // const arrayRNA = arrayDNA.map(letter => DNA[letter]).join('');
+//   // return arrayRNA;
+//   // With for of
+//   // let RNA = '';
+//   // for (let letter of transcription) {
+//   //   RNA += DNA[letter];
+//   // }
+//   // return RNA;
+//   // With Reduce
+//   return transcription.split('').reduce((rna, letter) => rna + DNA[letter], '');
+// };
+// export const DNA = {
+//   G: 'C',
+//   C: 'G',
+//   T: 'A',
+//   A: 'U',
+// }
+//
+
+// *****************************************************************************//
+
+// Space Age
+// export const age = (planet, seconds) => {
+//   const earthYearInSeconds = 31557600;
+//   const orbitalPeriod = ORBITALPERIODS[planet];
+//   const ageInYears = seconds / (earthYearInSeconds * orbitalPeriod);
+//   const age = Number(ageInYears.toFixed(2));
+//
+//   return age;
+// };
+//
+// export const ORBITALPERIODS = {
+//     mercury: 0.2408467,
+//     venus: 0.61519726,
+//     earth: 1.0,
+//     mars: 1.8808158,
+//     jupiter: 11.862615,
+//     saturn: 29.447498,
+//     uranus: 84.016846,
+//     neptune: 164.79132
+// };
+//
+
+// *****************************************************************************//
+
+// Pangram
+// export const isPangram = (setence) => {
+//   // With Spread and Every
+//   // return [...ALPHABET].every(char => setence.toLowerCase().includes(char));
+//
+//   const cleanSetence = setence.toLowerCase().replace(/[^a-z]/g, '');
+//   const newSetence = Array.from(new Set(cleanSetence)).sort().join('');
+//
+//   return newSetence === ALPHABET;
+// };
+//
+
+// export const ALPHABET = 'abcdefghijklmnopqrstuvwxyz';
+
+// *****************************************************************************//
+
+// Matrix
+// export class Matrix {
+//   constructor(string) {
+//     this.matrix = string.split('\n');
+//   }
+//
+//   get rows() {
+//     return this.matrix.map(row => row.split(' ').map(Number));
+//   }
+//   get columns() {
+//     return this.rows[0].map((_, i) => {
+//       return this.rows.map(row => row[i]);
+//     })
+//   }
+// }
+//
+
+// *****************************************************************************//
+
+// Bob
+// export const hey = (message) => {
+//   const phrase = message.trim();
+//
+//   if(phrase === '') return ANSWER_SILENCE;
+//
+//   const isYelling = phrase === phrase.toUpperCase() && /[A-Z]/.test(phrase);
+//   const isQuestion = phrase.endsWith('?');
+//
+//   if(isYelling && isQuestion) return ANSWER_YELL_QUESTION;
+//   if(isYelling) return ANSWER_YELL;
+//   if(isQuestion) return ANSWER_QUESTION;
+//   return ANSWER_ANYTHING;
+// };
+//
+// export const ANSWER_QUESTION = "Sure.";
+// export const ANSWER_YELL = "Whoa, chill out!";
+// export const ANSWER_YELL_QUESTION = "Calm down, I know what I'm doing!";
+// export const ANSWER_SILENCE = "Fine. Be that way!";
+// export const ANSWER_ANYTHING = "Whatever.";
+//
+
+// *****************************************************************************//
+
+// Book Store
+// export const discountsPrice = {
+// 	0: 0,
+// 	1: 800,
+// 	2: 2 * 800 * 0.95,
+// 	3: 3 * 800 * 0.9,
+// 	4: 4 * 800 * 0.8,
+// 	5: 5 * 800 * 0.75,
+// };
+// export const cost = (books) => {
+//  let booksSet = [];
+//   while (books.length > 0) {
+//     booksSet.push(new Set(books).size);
+//     new Set(books).forEach((elem) => {
+//       books.splice(books.indexOf(elem), 1);
+//     });
+//   }
+//
+//   while (booksSet.includes(3) && booksSet.includes(5)) {
+// 		booksSet.splice(booksSet.indexOf(3), 1);
+// 		booksSet.splice(booksSet.indexOf(5), 1);
+// 		booksSet.push(4, 4);
+// 	}
+//   return booksSet.reduce((total, set) => (total += discountsPrice[set]), 0);
+// };
+//
+
+// *****************************************************************************//
+
+// Pascal's Triangle
+// export const rows = (rows) => {
+//   // const triangle = [];
+//
+//   // for (let i = 0; i < rows; i++) {
+//   //   triangle[i] = [];
+//   //   triangle[i][0] = 1;
+//   //   triangle[i][i] = 1;
+//
+//   //   for (let j = 1; j < i; j++) {
+//   //     triangle[i][j] = triangle[i-1][j-1] + triangle[i-1][j];
+//   //   }
+//   // }
+//
+//   // return triangle;
+//
+//   const triangle = [];
+//   if (rows >= 1) {
+//     triangle.push([1]);
+//   }
+//
+//   for (let i = 1; i < rows; i++) {
+//     const previousRow = triangle[i - 1];
+//     const currentRow = [1];
+//
+//     for (let j = 1; j < i; j++) {
+//       currentRow[j] = previousRow[j - 1] + previousRow[j];
+//     }
+//
+//     currentRow.push(1);
+//     triangle.push(currentRow);
+//   }
+//
+//   return triangle;
+// };
+//
+
+// *****************************************************************************//
