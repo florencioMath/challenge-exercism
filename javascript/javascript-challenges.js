@@ -1045,3 +1045,42 @@
 //
 
 // *****************************************************************************//
+
+// Pascal's Triangle
+// export const rows = (rows) => {
+//   // const triangle = [];
+//
+//   // for (let i = 0; i < rows; i++) {
+//   //   triangle[i] = [];
+//   //   triangle[i][0] = 1;
+//   //   triangle[i][i] = 1;
+//
+//   //   for (let j = 1; j < i; j++) {
+//   //     triangle[i][j] = triangle[i-1][j-1] + triangle[i-1][j];
+//   //   }
+//   // }
+//
+//   // return triangle;
+//
+//   const triangle = [];
+//   if (rows >= 1) {
+//     triangle.push([1]);
+//   }
+//
+//   for (let i = 1; i < rows; i++) {
+//     const previousRow = triangle[i - 1];
+//     const currentRow = [1];
+//
+//     for (let j = 1; j < i; j++) {
+//       currentRow[j] = previousRow[j - 1] + previousRow[j];
+//     }
+//
+//     currentRow.push(1);
+//     triangle.push(currentRow);
+//   }
+//
+//   return triangle;
+// };
+//
+
+// *****************************************************************************//
