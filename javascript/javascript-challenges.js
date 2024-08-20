@@ -1153,3 +1153,44 @@
 //
 
 // *****************************************************************************//
+
+// Grade School
+// export class GradeSchool {
+//   constructor() {
+//    this._rooster = {};
+//   }
+//
+//   roster() {
+//     return this._rooster;
+//   }
+//
+//   add(student, grade) {
+//     for (let key in this._rooster) {
+//         if (this._rooster[key].includes(student)) {
+//             this._rooster[key] = this._rooster[key].filter(name => name !== student);
+//         }
+//     }
+//
+//     if (!this._rooster[grade]) {
+//         this._rooster[grade] = [];
+//     }
+//
+//     this._rooster[grade].push(student);
+//     this._rooster[grade].sort();
+//   }
+//
+//   grade(grade) {
+//     return [...(this._rooster[grade] || [])];
+//   }
+//
+//     roster() {
+//         const copy = {};
+//         for (let grade in this._rooster) {
+//             copy[grade] = [...this._rooster[grade]];
+//         }
+//         return Object.freeze(copy);
+//     }
+// }
+//
+
+// *****************************************************************************//
