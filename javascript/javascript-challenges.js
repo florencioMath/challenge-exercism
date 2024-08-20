@@ -1084,3 +1084,72 @@
 //
 
 // *****************************************************************************//
+
+// Linked List
+// class Node {
+//   constructor(prev = null, next = null, value = null){
+//     this.prev = prev;
+//     this.next = next;
+//     this.value = value;
+//   }
+// }
+//
+// export class LinkedList {
+//   constructor() {
+//     this.last = new Node();
+//     this.first = new Node(null, this.last);
+//     this.last.prev = this.first;
+//   }
+//
+//   push(value) {
+//     let newNode = new Node(this.last.prev, this.last, value);
+//     this.last.prev.next = newNode;
+//     this.last.prev = newNode;
+//   }
+//
+//   pop() {
+//     const value = this.last.prev.value;
+//     this.last.prev.prev.next = this.last;
+//     this.last.prev = this.last.prev.prev;
+//     return value;
+//   }
+//
+//   shift() {
+//     const value = this.first.next.value;
+//     this.first.next.next.prev = this.first;
+//     this.first.next = this.first.next.next;
+//     return value;
+//   }
+//
+//   unshift(value) {
+//     let newNode = new Node(this.first, this.first.next, value);
+//     this.first.next.prev = newNode;
+//     this.first.next = newNode;
+//   }
+//
+//   delete(value) {
+//     let node = this.first;
+//     while (node.next !== null) {
+//       if (node.value === value){
+//         node.next.prev = node.prev;
+//         node.prev.next = node.next;
+//         break;
+//       }
+//       node = node.next;
+//     }
+//   }
+//
+//   count() {
+//     let node = this.first;
+//     let count = 0;
+//     while(node.next !== this.last){
+//       count++;
+//       node = node.next;
+//     }
+//     return count;
+//   }
+//
+// }
+//
+
+// *****************************************************************************//
