@@ -1194,3 +1194,46 @@
 //
 
 // *****************************************************************************//
+
+// List Ops
+// export class List {
+//   constructor(values = []) {
+//     this.values = values || [];
+//   }
+//
+//   append(list) {
+//     return new List([...this.values, ...list.values]);
+//   }
+//
+//   concat(list) {
+//     return list.foldl((acc, elt) => acc.append(elt), this);
+//   }
+//
+//   filter(callback) {
+//     return new List(this.foldl((acc, elt) => callback(elt) ? [...acc, elt] : acc, []));
+//   }
+//
+//   map(callback) {
+//     return new List(this.foldl((acc, elt) => [...acc, callback(elt)], []));
+//   }
+//
+//   length() {
+//     return this.foldl(i => i + 1, 0);
+//   }
+//
+//   foldl(callback, initialValue, values) {
+//     const [head, ...tail] = values || this.values;
+//     return head ? this.foldl(callback, callback(initialValue, head), tail) : initialValue;
+//   }
+//
+//   foldr(callback, initialValue) {
+//     return this.reverse().foldl(callback, initialValue);
+//   }
+
+//   reverse() {
+//     return new List(this.foldl((acc, elt) => [elt, ...acc], []));
+//   }
+// }
+//
+
+// *****************************************************************************//
