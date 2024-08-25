@@ -1278,3 +1278,53 @@
 //
 
 // *****************************************************************************//
+
+// Simple Cipher
+// export class Cipher {
+//   constructor(sec) {
+//     this.sec = sec;
+//   }
+//
+//   encode(string) {
+//     let strArr = string.split("");
+//
+//     if (!this.sec) {
+//       let key = "";
+//       strArr.forEach(() => {
+//         let tempRandom = Math.floor(Math.random() * (122 - 97 + 1) + 97);
+//         key += String.fromCharCode(tempRandom);
+//       });
+//       this.sec = key;
+//       return this.sec;
+//     }
+//
+//     let strs = "";
+//
+//     strArr.forEach((str, index) => {
+//       let takeAsciiValKey = this.sec.charCodeAt(index % this.sec.length);
+//       let cal = takeAsciiValKey - 97 + str.charCodeAt(0);
+//       strs += String.fromCharCode(cal > 122 ? (cal - 122) + 96 : cal);
+//     });
+//     return strs;
+//   }
+//
+//   decode(string) {
+//     let strArr = string.split("");
+//     let strs = "";
+//
+//     strArr.forEach((str, index) => {
+//       let takeAsciiValKey = this.sec.charCodeAt(index % this.sec.length);
+//       let cal = str.charCodeAt(0) - (takeAsciiValKey - 97);
+//       strs += String.fromCharCode(cal < 97 ? 123 - (97 - cal) : cal);
+//     });
+//
+//     return strs;
+//   }
+//
+//   get key() {
+//     return this.sec;
+//   }
+// }
+//
+
+// *****************************************************************************//
