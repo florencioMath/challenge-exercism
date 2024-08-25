@@ -1084,3 +1084,247 @@
 //
 
 // *****************************************************************************//
+
+// Linked List
+// class Node {
+//   constructor(prev = null, next = null, value = null){
+//     this.prev = prev;
+//     this.next = next;
+//     this.value = value;
+//   }
+// }
+//
+// export class LinkedList {
+//   constructor() {
+//     this.last = new Node();
+//     this.first = new Node(null, this.last);
+//     this.last.prev = this.first;
+//   }
+//
+//   push(value) {
+//     let newNode = new Node(this.last.prev, this.last, value);
+//     this.last.prev.next = newNode;
+//     this.last.prev = newNode;
+//   }
+//
+//   pop() {
+//     const value = this.last.prev.value;
+//     this.last.prev.prev.next = this.last;
+//     this.last.prev = this.last.prev.prev;
+//     return value;
+//   }
+//
+//   shift() {
+//     const value = this.first.next.value;
+//     this.first.next.next.prev = this.first;
+//     this.first.next = this.first.next.next;
+//     return value;
+//   }
+//
+//   unshift(value) {
+//     let newNode = new Node(this.first, this.first.next, value);
+//     this.first.next.prev = newNode;
+//     this.first.next = newNode;
+//   }
+//
+//   delete(value) {
+//     let node = this.first;
+//     while (node.next !== null) {
+//       if (node.value === value){
+//         node.next.prev = node.prev;
+//         node.prev.next = node.next;
+//         break;
+//       }
+//       node = node.next;
+//     }
+//   }
+//
+//   count() {
+//     let node = this.first;
+//     let count = 0;
+//     while(node.next !== this.last){
+//       count++;
+//       node = node.next;
+//     }
+//     return count;
+//   }
+//
+// }
+//
+
+// *****************************************************************************//
+
+// Grade School
+// export class GradeSchool {
+//   constructor() {
+//    this._rooster = {};
+//   }
+//
+//   roster() {
+//     return this._rooster;
+//   }
+//
+//   add(student, grade) {
+//     for (let key in this._rooster) {
+//         if (this._rooster[key].includes(student)) {
+//             this._rooster[key] = this._rooster[key].filter(name => name !== student);
+//         }
+//     }
+//
+//     if (!this._rooster[grade]) {
+//         this._rooster[grade] = [];
+//     }
+//
+//     this._rooster[grade].push(student);
+//     this._rooster[grade].sort();
+//   }
+//
+//   grade(grade) {
+//     return [...(this._rooster[grade] || [])];
+//   }
+//
+//     roster() {
+//         const copy = {};
+//         for (let grade in this._rooster) {
+//             copy[grade] = [...this._rooster[grade]];
+//         }
+//         return Object.freeze(copy);
+//     }
+// }
+//
+
+// *****************************************************************************//
+
+// List Ops
+// export class List {
+//   constructor(values = []) {
+//     this.values = values || [];
+//   }
+//
+//   append(list) {
+//     return new List([...this.values, ...list.values]);
+//   }
+//
+//   concat(list) {
+//     return list.foldl((acc, elt) => acc.append(elt), this);
+//   }
+//
+//   filter(callback) {
+//     return new List(this.foldl((acc, elt) => callback(elt) ? [...acc, elt] : acc, []));
+//   }
+//
+//   map(callback) {
+//     return new List(this.foldl((acc, elt) => [...acc, callback(elt)], []));
+//   }
+//
+//   length() {
+//     return this.foldl(i => i + 1, 0);
+//   }
+//
+//   foldl(callback, initialValue, values) {
+//     const [head, ...tail] = values || this.values;
+//     return head ? this.foldl(callback, callback(initialValue, head), tail) : initialValue;
+//   }
+//
+//   foldr(callback, initialValue) {
+//     return this.reverse().foldl(callback, initialValue);
+//   }
+
+//   reverse() {
+//     return new List(this.foldl((acc, elt) => [elt, ...acc], []));
+//   }
+// }
+//
+
+// *****************************************************************************//
+
+// Robot Name
+// export class Robot {
+//   static usedNames = new Set();
+//
+//   constructor () {
+//       this._name = this.setName();
+//   }
+//
+//   get name() {
+//       return this._name
+//   }
+//
+//   setName = () => {
+//       let name
+//       do {
+//         name = this.generateName()
+//       } while (Robot.usedNames.has (name) )
+//
+//       Robot.usedNames.add(name);
+//
+//       return name;
+//   }
+//
+//   generateName = () => {
+//       const letter = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+//       const digit = '0123456789'
+//       const random = (string) => {return string[Math.floor(Math.random() * (string.length))]};
+//       let name = random(letter) + random(letter) + random(digit) + random(digit) + random(digit);
+//
+//       return name;
+//   }
+//
+//   reset = () => {
+//       this._name = this.setName();
+//   }
+// }
+// Robot.releaseNames = () => { Robot.usedNames.clear() };
+//
+
+// *****************************************************************************//
+
+// Simple Cipher
+// export class Cipher {
+//   constructor(sec) {
+//     this.sec = sec;
+//   }
+//
+//   encode(string) {
+//     let strArr = string.split("");
+//
+//     if (!this.sec) {
+//       let key = "";
+//       strArr.forEach(() => {
+//         let tempRandom = Math.floor(Math.random() * (122 - 97 + 1) + 97);
+//         key += String.fromCharCode(tempRandom);
+//       });
+//       this.sec = key;
+//       return this.sec;
+//     }
+//
+//     let strs = "";
+//
+//     strArr.forEach((str, index) => {
+//       let takeAsciiValKey = this.sec.charCodeAt(index % this.sec.length);
+//       let cal = takeAsciiValKey - 97 + str.charCodeAt(0);
+//       strs += String.fromCharCode(cal > 122 ? (cal - 122) + 96 : cal);
+//     });
+//     return strs;
+//   }
+//
+//   decode(string) {
+//     let strArr = string.split("");
+//     let strs = "";
+//
+//     strArr.forEach((str, index) => {
+//       let takeAsciiValKey = this.sec.charCodeAt(index % this.sec.length);
+//       let cal = str.charCodeAt(0) - (takeAsciiValKey - 97);
+//       strs += String.fromCharCode(cal < 97 ? 123 - (97 - cal) : cal);
+//     });
+//
+//     return strs;
+//   }
+//
+//   get key() {
+//     return this.sec;
+//   }
+// }
+//
+
+// *****************************************************************************//
